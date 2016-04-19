@@ -43,3 +43,7 @@ func Warnf(format string, v ...interface{}) {
 func Fatalln(v ...interface{}) {
 	log.Fatalln(v...)
 }
+
+func Fatalf(format string, v ...interface{}) {
+	log.Fatalf(format, v...)
+}

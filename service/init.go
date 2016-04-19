@@ -1,22 +1,15 @@
 package service
 
 import (
+	"dz/service/config"
+	"dz/service/db"
 	dzlog "dz/service/log"
-
-	"github.com/gin-gonic/gin"
-)
-
-const (
-	HTTP_ADDR = `:40001`
+	"dz/service/web"
 )
 
 func Init() {
+	config.Init()
 	dzlog.Init()
-
-	app := gin.New()
-	dzlog.Infof("Runing on:%s", HTTP_ADDR)
-	err := app.Run(HTTP_ADDR)
-	if nil != err {
-		dzlog.Fatalln(err)
-	}
+	db.Init()
+	web.Init()
 }

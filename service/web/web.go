@@ -11,21 +11,15 @@ const (
 )
 
 var (
-	app *gin.Engine
+	App = gin.New()
 )
 
-func Init() {
-	app = gin.New()
+func Start() {
 	dzlog.Infof("Runing on:%s", HTTP_ADDR)
-
-	err := app.Run(HTTP_ADDR)
+	err := App.Run(HTTP_ADDR)
 	if nil != err {
 		dzlog.Fatalln(err)
 	}
-}
-
-func Web() *gin.Engine {
-	return app
 }
 
 type HttpHandler func(*gin.Context)
@@ -41,9 +35,3 @@ func Register(path string, h HttpHandler) {
 
 	handlers[path] = h
 }
-
-func InitRouters() {
-
-}
-
-type RouterGroup *gin.RouterGroup

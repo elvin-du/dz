@@ -11,6 +11,9 @@ type Context struct {
 	DBCtx *context.Context
 }
 
-func NewContext(*gin.Context) *Context {
-	return &Context{}
+func NewContext(ctx *gin.Context) *Context {
+	return &Context{
+		Context: ctx,
+		DBCtx:   context.NewContext(),
+	}
 }

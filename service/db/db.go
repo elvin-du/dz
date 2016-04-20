@@ -9,7 +9,7 @@ import (
 
 var (
 	db  *sql.DB
-	dsn = `root:abc@tcp(localhost:3306)/dz`
+	dsn = `root:abc@tcp(localhost:3306)/dz?charset=utf8`
 )
 
 func Init() {

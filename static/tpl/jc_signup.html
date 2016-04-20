@@ -1,0 +1,28 @@
+{{template "header" .}}
+<div class="wrap">
+<div id="warning">感謝您報名黃庭禪。由於名額有限，我們需要審核報名人是否適合參加本課程，請您填好報名表傳至本單位。並請您儘快繳費以確定您的名額。謝謝！
+</div>
+</br>
+<h1 class="signup-title">黄庭禅报名表</h1>
+<form method="post" action="/1.0/jc">
+姓名：
+<input type="text" name="name"/>
+</br>
+
+性别：
+<input type="radio" name="gender" value="femal"/>男
+<input type="radio" name="gender" value="male"/>女
+</br>
+
+出生日期：
+<input type="date" name="birthday"/>
+</br>
+
+身份证号：
+<input type="text" name="id"/>
+</br>
+
+<input class="submit" type="submit" value="提交"/>
+</form>
+<div>
+{{template "footer" .}}

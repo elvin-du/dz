@@ -16,6 +16,8 @@ var (
 
 func Start() {
 	dzlog.Infof("Runing on:%s", HTTP_ADDR)
+    App.LoadHTMLGlob("static/tpl/*")
+    App.Static("/pub","./static")
 	err := App.Run(HTTP_ADDR)
 	if nil != err {
 		dzlog.Fatalln(err)

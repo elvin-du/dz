@@ -28,3 +28,11 @@ func (this *APIVersion) GET(relativePath string, handlers ...Handler) {
 		}
 	})
 }
+
+func (this *APIVersion) POST(relativePath string, handlers ...Handler) {
+	this.RouterGroup.POST(relativePath, func(ctx *gin.Context) {
+		for _, f := range handlers {
+			f(NewContext(ctx))
+		}
+	})
+}

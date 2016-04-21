@@ -5,6 +5,7 @@ import (
 	"dz/service/log"
 	"fmt"
 	"time"
+    "strings"
 )
 
 type postModel struct{}
@@ -46,4 +47,33 @@ func (this *postModel) Query(ctx *Context, id uint64) (*Post, error) {
 	}
 
 	return &p, nil
+}
+
+func (this *postModel) QueryByIds(ctx *Context, ids []uint64) ([]*Post, error) {
+    var idsStr []string
+    for _, v := range ids{
+        idsStr = append(idsStr,fmt.Sprintf("%d",v))
+    }
+
+    idsCond := strings.Join(idsStr,",")
+	sqlStr := fmt.Sprintf("SELECT * FROM dz.posts WHERE id IN(%s)", idsCond)
+	rows, err := ctx.Query(sqlStr)
+	if nil != err {
+		log.Errorf("sql:%s,err:%s", sqlStr, err)
+		return nil, err
+	}
+
+	var ps []*Post
+	for rows.Next() {
+        var p Post
+		err := rows.Scan(&p.Id, &p.Title, &p.Content)
+        if nil != err{
+            log.Errorln(err)
+            return nil,err
+        }
+
+        ps = append(ps,&p)
+	}
+
+	return ps, nil
 }

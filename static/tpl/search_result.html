@@ -1,3 +1,11 @@
 {{template "header" .}}
-{{.result}}
+<ul>
+{{range $k,$v := .results}}
+<li>
+<h3>{{$v.title}}</h3>
+<p>{{$v.content}}</p>
+<hr/>
+</li>
+{{end}}
+</ul>
 {{template "footer" .}}

@@ -8,8 +8,9 @@ import (
 	"dz/service/log"
 	"strings"
 
+	"html/template"
+
 	"github.com/gin-gonic/gin"
-    "html/template"
 )
 
 func init() {
@@ -28,15 +29,26 @@ func (this *searchController) Index(ctx *Context) {
 func (this *searchController) Do(ctx *Context) {
 	key := ctx.PostForm("key")
 	resp := dw.Query(key)
-	log.Debugln(resp)
-	post, err := model.PostModel().Query(ctx.DBCtx, resp.Docs[0].DocId)
-	if nil != err {
-		log.Errorln(err)
-		ctx.String(200, err.Error())
-		return
+
+	var boo = []map[string]template.HTML{}
+	for _, v := range resp.Docs {
+		post, err := model.PostModel().Query(ctx.DBCtx, v.DocId)
+		if nil != err {
+			log.Errorln(err)
+			ctx.String(200, err.Error())
+			return
+		}
+
+		title := post.Title
+		content := post.Content
+		for _, v2 := range resp.Tokens {
+			title = strings.Replace(title, v2, `<span style="color:red">`+v2+`</span>`, -1)
+			content = strings.Replace(content, v2, `<span style="color:red">`+v2+`</span>`, -1)
+		}
+
+		var m = map[string]template.HTML{"title": template.HTML(title), "content": template.HTML(content)}
+		boo = append(boo, m)
 	}
 
-    log.Debugln(post.Content)
-	res := strings.Replace(post.Title+post.Content, resp.Tokens[0], "<strong>"+resp.Tokens[0]+"</strong>", -1)
-	ctx.HTML(200, "search_result.html", gin.H{"title": "搜索结果", "result": template.HTML(res)})
+	ctx.HTML(200, "search_result.html", gin.H{"title": "搜索结果", "results": boo})
 }

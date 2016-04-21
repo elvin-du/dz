@@ -1,0 +1,18 @@
+{{template "header" .}}
+<form method="post" action="/1.0/admin/post">
+标题：
+<input type="text" name="title"/>
+<br/>
+内容：
+<input type="text" name="content"/>
+<br/>
+类型：
+<input type="radio" name="kind" value="video"/>视频
+<input type="radio" name="kind" value="audio"/>音频
+<input type="radio" name="kind" value="text"/>文本
+<br/>
+
+<input type="submit" value="提交"/>
+</form>
+{{template "footer" .}}
+

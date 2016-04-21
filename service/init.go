@@ -6,6 +6,7 @@ import (
 	"dz/service/log"
 	"dz/service/web"
 	_ "dz/web/controller"
+	_ "dz/web/controller/admin"
 )
 
 func Init() {

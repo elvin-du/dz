@@ -26,3 +26,16 @@ html body{
 #submit{
 
 }
+
+#input_title{
+	
+}
+
+#post_form{
+	text-align:center;
+}
+
+#post_form textarea{
+	width:70%;
+	height:50%;
+}

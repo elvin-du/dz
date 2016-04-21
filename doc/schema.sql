@@ -11,3 +11,10 @@ CREATE TABLE `users`(
 
 
 INSERT `users` SET id='1',name='elvin';
+
+CREATE TABLE `posts`(
+	id INT(36) UNSIGNED NOT NULL,
+	title VARCHAR(100) NOT NULL,
+	content TEXT NOT NULL,
+	PRIMARY KEY(`id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8;

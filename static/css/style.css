@@ -7,7 +7,7 @@ html body{
 }
 
 .wrap{
-	margin:0 15% 0 15%;
+	margin:50px 15% 0 15%;
 	padding:20px 20px 20px 20px;
 	background-color:white;
 	width:70%;
@@ -28,7 +28,7 @@ html body{
 }
 
 #input_title{
-	
+
 }
 
 #post_form{
@@ -38,4 +38,82 @@ html body{
 #post_form textarea{
 	width:70%;
 	height:50%;
+}
+
+.navbar{
+	line-height:2.5em;
+	margin:0 0 1em 0;
+}
+
+.navbar a{
+	color:red;
+	text-align:center;
+	font-weight:800;
+}
+
+.navbar a:link{
+	text-decoration:none;
+	background-color:#888;
+}
+
+.navbar a:hover{
+	background-color:#122;
+}
+
+#nav_jc{
+	float:left;
+	width:20%;
+}
+
+#nav_xsm{
+	float:left;
+	width:20%;
+}
+
+#nav_qpg{
+	float:left;
+	width:20%;
+}
+
+.wrap #float-clear-both{
+	clear:both;
+}
+
+#search_form{
+	float:right;
+	width:20%;
+}
+
+.navbar #search_form input[name="key"][type="search"]{
+	width:70%;
+	height:2.0em;
+}
+
+.navbar #search_form input[type="submit"][value="搜索"]{
+	height:2.0em;
+}
+
+.required{
+	color:red;
+}
+
+form[method="post"][action="/1.0/jc"] input[type="text"]{
+	width:100%;
+	font-size:1.3em;
+}
+
+form[method="post"][action="/1.0/jc"] input[type="email"]{
+	width:100%;
+	font-size:1.3em;
+}
+
+form[method="post"][action="/1.0/jc"] input[type="number"]{
+	width:100%;
+	font-size:1.3em;
+}
+
+#signup-submit{
+	width:100%;
+	font-size:1.5em;
+	line-height:1.5em;
 }

@@ -1,28 +1,100 @@
 {{template "header" .}}
-<div class="wrap">
-<div id="warning">感謝您報名黃庭禪。由於名額有限，我們需要審核報名人是否適合參加本課程，請您填好報名表傳至本單位。並請您儘快繳費以確定您的名額。謝謝！
-</div>
-</br>
-<h1 class="signup-title">黄庭禅报名表</h1>
+<h1 class="signup-title">{{.title}}</h1>
 <form method="post" action="/1.0/jc">
-姓名：
+<div style="font-size:1em;font-weight:700;">一、学员资料</div>
+<div>(学员资料为必填相，请您务必填写完整，我们不会以任何方式泄漏您任何信息，请您放心！)</div>
+</br>
+<div>1.姓名<span class="required">*</span>：</div>
 <input type="text" name="name"/>
 </br>
+</br>
 
-性别：
+<div>2.性别<span class="required">*</span>：</div>
 <input type="radio" name="gender" value="femal"/>男
 <input type="radio" name="gender" value="male"/>女
 </br>
+</br>
 
-出生日期：
+<div>3.出生日期<span class="required">*</span>：</div>
 <input type="date" name="birthday"/>
 </br>
-
-身份证号：
-<input type="text" name="id"/>
 </br>
 
-<input class="submit" type="submit" value="提交"/>
+<div>4.职业<span class="required">*</span>：</div>
+<input type="text" name="job"/>
+</br>
+</br>
+
+<div>5.最高学历<span class="required">*</span>：</div>
+<select name="degree">
+<option value="college">专科</option>
+<option value="bachelor">本科</option>
+<option value="master">硕士</option>
+<option value="phd">博士</option>
+</select>
+</br>
+</br>
+
+<div>6.身份证号<span class="required">*</span>：</div>
+<input type="text" name="id"/>
+</br>
+</br>
+
+<div>7.手机号码<span class="required">*</span>：</div>
+<input type="number" name="mobile"/>
+</br>
+</br>
+
+<div>8.邮箱<span class="required">*</span>：</div>
+<input type="email" name="email"/>
+</br>
+</br>
+
+<div style="font-size:1em;font-weight:700;">一、学员情况</div>
+</br>
+<div>9.您以前有习练过瑜伽、呼吸疗法或者心理咨商课、心灵成长课、禅修课程或其它课程吗？如果有，请说明：</div>
+<input type="text" name="pre-learning"/>
+</br>
+</br>
+
+<div>10. 您如何得知这次课程，或是谁向您推荐？</div>
+<input type="text" name="how-get"/>
+</br>
+</br>
+
+<div>11.您有宗教信仰吗？若有，请说明：</div>
+<input type="text" name="religion"/>
+</br>
+</br>
+
+<div>12.您是否有健康方面的问题，如：(糖尿病、心脏病、癫痫症、高血压、哮喘，或传染病如：肝炎、肺结核、伤寒、艾滋病或带原者。或是：肩颈椎病、腰椎损伤、膝盖损伤、高血压、心脏病、半年内做过大手术、失眠、焦虑、内分泌失调等)如果有上述症状，请说明(症状、病情、已病多久、发作情形、治疗情形)：</div>
+<input type="text" name="body-health"/>
+</br>
+</br>
+
+<div>13.现在或过去您有没有精神(心理)方面的问题呢？如明显沮丧或焦躁、恐慌、极度沮丧或人格分裂等？如果有，请说明(症状、病情、已患病多久、发作情形、治疗情形，住院及日期)：</div>
+<input type="text" name="mental-health"/>
+</br>
+</br>
+
+<div>14.您现在或最近两年内有没有服用过医生处方的药品？如果有，请说明(种类、剂量，多久吃一次及服用期间有多长)：</div>
+<input type="text" name="medical"/>
+</br>
+</br>
+
+<div>15.什么原因促使您来参加本次课程 ？</div>
+<input type="text" name="why-come"/>
+</br>
+</br>
+
+<div>15.您对本次课程有何期待：</div>
+<input type="text" name="your-expect"/>
+</br>
+</br>
+
+<div style="font-size:1em;font-weight:700;">三、报名程序</div>
+
+<div style=" text-align:center;"><input id="signup-submit" type="submit" value="提交"/></div>
 </form>
-<div>
+
 {{template "footer" .}}

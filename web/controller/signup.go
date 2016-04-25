@@ -4,6 +4,7 @@ import (
 	. "dz/web/context"
 
 	"github.com/gin-gonic/gin"
+//    "html/template"
 )
 
 func init() {
@@ -28,9 +29,9 @@ func (this *signupController) QPG(ctx *Context) {
 }
 
 func (this *signupController) JC(ctx *Context) {
-	ctx.HTML(200, "jc_signup.html",gin.H{"title":"静禅"})
+	ctx.HTML(200, "jc_signup.html",gin.H{"title":"南京初阶二日禅报名表4/30-5/1"})
 }
 
 func (this *signupController) JCSubmit(ctx *Context) {
-	ctx.String(200,ctx.PostForm("name"))
+    ctx.Data(200,"text/html",[]byte(`<a href="/1.0/jc">返回</a>`))
 }

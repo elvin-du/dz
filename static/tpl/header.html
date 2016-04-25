@@ -1,9 +1,23 @@
 {{define "header"}}
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
 <title>{{.title}}</title>
 <link rel= "stylesheet" type="text/css" href="/pub/css/style.css"/>
+<link rel="shortcut icon" type="image/png" href="/favicon.ico"/>
 </head>
 <body>
+<div class="wrap">
+<div class="navbar">
+<a href="/1.0/jc" id="nav_jc">静禅</a>
+<a href="/1.0/xsm" id="nav_xsm">小树苗</a>
+<a href="/1.0/qpg" id="nav_qpg">青苹果</a>
+
+<form id="search_form" method="POST" action="/1.0/search">
+<input name="key" type="search"/>
+<input type="submit" value="搜索"/>
+</form>
+
+<div id="float-clear-both"></div>
+</div>
 {{end}}

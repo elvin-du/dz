@@ -38,11 +38,29 @@ func (this *searchController) Do(ctx *Context) {
 			ctx.String(200, err.Error())
 			return
 		}
+        log.Debugln(v.TokenSnippetLocations)
+        log.Debugln(v.TokenLocations)
+        log.Debugln(v.Scores)
 
 		title := post.Title
 		content := post.Content
 		for _, v2 := range resp.Tokens {
+            log.Debugln(v2)
 			title = strings.Replace(title, v2, `<span style="color:red">`+v2+`</span>`, -1)
+//            start := v.TokenSnippetLocations[i]
+//            if start < 30{
+//                start = 0
+//            }else{
+//                start = -30
+//            }
+
+//            end := len(content) - v.TokenSnippetLocations[i]
+//            if end >= 30{
+//                end = v.TokenSnippetLocations[i] + 30
+//            }else{
+//                end = len(content) - v.TokenSnippetLocations[i]
+//            }
+
 			content = strings.Replace(content, v2, `<span style="color:red">`+v2+`</span>`, -1)
 		}
 

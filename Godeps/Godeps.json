@@ -1,8 +1,107 @@
 {
 	"ImportPath": "dz",
 	"GoVersion": "go1.5",
-	"Packages": [
-		"/..."
-	],
-	"Deps": []
+	"Deps": [
+		{
+			"ImportPath": "github.com/adamzy/cedar-go",
+			"Rev": "d348c21f72432c2b6d5f05f68759fde94f64b227"
+		},
+		{
+			"ImportPath": "github.com/boltdb/bolt",
+			"Comment": "v1.2.0-13-g144418e",
+			"Rev": "144418e1475d8bf7abbdc48583500f1a20c62ea7"
+		},
+		{
+			"ImportPath": "github.com/cznic/bufs",
+			"Rev": "3dcccbd7064a1689f9c093a988ea11ac00e21f51"
+		},
+		{
+			"ImportPath": "github.com/cznic/exp/lldb",
+			"Rev": "c21cce1fce3e6e5bc84854aa3d02a808de44229b"
+		},
+		{
+			"ImportPath": "github.com/cznic/fileutil",
+			"Rev": "1c9c88fbf552b3737c7b97e1f243860359687976"
+		},
+		{
+			"ImportPath": "github.com/cznic/kv",
+			"Rev": "120f703e55bccf293fac6654e26208665365a096"
+		},
+		{
+			"ImportPath": "github.com/cznic/mathutil",
+			"Rev": "38a5fe05cd94d69433fd1c928417834c604f281d"
+		},
+		{
+			"ImportPath": "github.com/cznic/sortutil",
+			"Rev": "4c7342852e65c2088c981288f2c5610d10b9f7f4"
+		},
+		{
+			"ImportPath": "github.com/cznic/zappy",
+			"Rev": "4f5e6ef19fd692f1ef9b01206de4f1161a314e9a"
+		},
+		{
+			"ImportPath": "github.com/gin-gonic/gin",
+			"Comment": "v1.0rc1-262-g5caaac4",
+			"Rev": "5caaac4c5c712a9e7a7de29e6c24ef46c753017f"
+		},
+		{
+			"ImportPath": "github.com/go-sql-driver/mysql",
+			"Comment": "go1",
+			"Rev": "9a7aa3606b82e2081a13a008ada88dfdb96c20fd"
+		},
+		{
+			"ImportPath": "github.com/golang/protobuf/proto",
+			"Rev": "99511271042a09d1e01baea8781caa5210fec66e"
+		},
+		{
+			"ImportPath": "github.com/huichen/murmur",
+			"Rev": "e0489551cf5116e27d7cc69d97a53cdbdd028acf"
+		},
+		{
+			"ImportPath": "github.com/huichen/sego",
+			"Rev": "d06fe1b3abe3877ab593b57e5e43daf6c4c25add"
+		},
+		{
+			"ImportPath": "github.com/huichen/wukong/core",
+			"Comment": "v0.1-77-g8a2c1e5",
+			"Rev": "8a2c1e5de05f99daa82ca92d9e7bb8748178ac3f"
+		},
+		{
+			"ImportPath": "github.com/huichen/wukong/engine",
+			"Comment": "v0.1-77-g8a2c1e5",
+			"Rev": "8a2c1e5de05f99daa82ca92d9e7bb8748178ac3f"
+		},
+		{
+			"ImportPath": "github.com/huichen/wukong/storage",
+			"Comment": "v0.1-77-g8a2c1e5",
+			"Rev": "8a2c1e5de05f99daa82ca92d9e7bb8748178ac3f"
+		},
+		{
+			"ImportPath": "github.com/huichen/wukong/types",
+			"Comment": "v0.1-77-g8a2c1e5",
+			"Rev": "8a2c1e5de05f99daa82ca92d9e7bb8748178ac3f"
+		},
+		{
+			"ImportPath": "github.com/huichen/wukong/utils",
+			"Comment": "v0.1-77-g8a2c1e5",
+			"Rev": "8a2c1e5de05f99daa82ca92d9e7bb8748178ac3f"
+		},
+		{
+			"ImportPath": "github.com/manucorporat/sse",
+			"Rev": "fe6ea2c8e398672518ef204bf0fbd9af858d0e15"
+		},
+		{
+			"ImportPath": "golang.org/x/net/context",
+			"Rev": "3a57334a74297f7e2eadd8825c154dceeeb32a5b"
+		},
+		{
+			"ImportPath": "gopkg.in/go-playground/validator.v8",
+			"Comment": "v8.17.1",
+			"Rev": "014792cf3e266caff1e916876be12282b33059e0"
+		},
+		{
+			"ImportPath": "gopkg.in/yaml.v2",
+			"Rev": "49c95bdc21843256fb6c4e0d370a05f24a0bf213"
+		}
+	]
 }

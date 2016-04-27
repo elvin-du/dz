@@ -14,8 +14,8 @@ import (
 )
 
 func init() {
-	V1.GET("/search", _search.Index)
-	V1.POST("/search", _search.Do)
+	WEB.GET("/search", _search.Index)
+	WEB.POST("/search", _search.Do)
 }
 
 type searchController struct{}

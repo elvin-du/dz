@@ -8,12 +8,12 @@ import (
 )
 
 func init() {
-	V1.GET("/xsm", _signup.XSM)
-//	V1.POST("/xsm", _signup.XSMSubmit)
-	V1.GET("/qpg", _signup.QPG)
-//	V1.POST("/qpg", _signup.QPGSubmit)
-	V1.GET("/jc", _signup.JC)
-	V1.POST("/jc", _signup.JCSubmit)
+	WEB.GET("/xsm", _signup.XSM)
+//	WEB.POST("/xsm", _signup.XSMSubmit)
+	WEB.GET("/qpg", _signup.QPG)
+//	WEB.POST("/qpg", _signup.QPGSubmit)
+	WEB.GET("/jc", _signup.JC)
+	WEB.POST("/jc", _signup.JCSubmit)
 }
 
 type signupController struct{}

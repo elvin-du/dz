@@ -6,7 +6,7 @@ import (
 )
 
 func init() {
-	V1.GET("/user", _user.Info)
+	WEB.GET("/user", _user.Info)
 }
 
 type userController struct{}

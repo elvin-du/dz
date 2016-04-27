@@ -7,7 +7,7 @@ import (
 )
 
 func init() {
-	V1.GET("/", _home.Index)
+	WEB.GET("/", _home.Index)
 }
 
 type homeController struct{}

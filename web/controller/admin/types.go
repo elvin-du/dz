@@ -6,10 +6,9 @@ import (
 )
 
 var (
-	_v1    = "1.0"
 	_admin = "admin"
 	V1Admin = &APIVersion{
-		Version:     _v1,
-		RouterGroup: web.App.Group(_v1).Group(_admin),
+		Version:     _admin,
+		RouterGroup: web.App.Group(_admin),
 	}
 )

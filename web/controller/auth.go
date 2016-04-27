@@ -5,7 +5,7 @@ import (
 )
 
 func init() {
-	V1.GET("/auth", _auth.Auth)
+	WEB.GET("/auth", _auth.Auth)
 }
 
 type authController struct{}

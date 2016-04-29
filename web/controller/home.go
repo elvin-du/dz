@@ -15,5 +15,5 @@ type homeController struct{}
 var _home = homeController{}
 
 func (this *homeController) Index(ctx *Context) {
-	ctx.HTML(200, "home.html",gin.H{"title":"首页"})
+	ctx.HTML(200, "home.html",gin.H{"title":"课程信息"})
 }
